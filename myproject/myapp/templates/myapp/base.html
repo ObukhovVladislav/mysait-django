@@ -4,29 +4,50 @@
     <meta charset="UTF-8">
     <title>Главная</title>
     {% block css %}
-        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/style.css">
     {% endblock %}
     {% block js %}
     {% endblock %}
 </head>
 <body>
-<div class="main-menu">
-    <ul>
-        <li>
-            <a href="/">Главная</a>
+<nav>
+    <ul class="topmenu">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/catalog/" class="down">Каталог</a>
+            <ul class="submenu">
+                <li><a href="">Компьютерная техника</a></li>
+                <li><a href="">Бытовая техника</a></li>
+                <li><a href="">Мобильные телефоны</a></li>
+            </ul>
         </li>
-        <li>
-            <a href="/catalog/">Каталог</a>
-        </li>
-        <li>
-            <a href="/basket/">Корзина</a>
-<div></div>
-        </li>
+        <li><a href="/basket/">Корзина</a></li>
     </ul>
-</div>
+</nav>
 
-{% block content %}
-{% endblock %}
+<form>
+  <div class="container">
+    <h1>Регистрация</h1>
+    <p>Пожалуйста заполните эту форму для регистрации аккаунта.</p>
+    <hr>
+
+    <label for="email"><b>Ваш e-mail(он же будет логином)*</b></label>
+    <input type="text" placeholder="Адрес вашей электронной почты" name="email" required>
+
+    <label for="psw"><b>Пароль</b></label>
+    <input type="password" placeholder="Задайте пароль" name="psw" required>
+
+    <label for="psw-repeat"><b>Повторите пароль</b></label>
+    <input type="password" placeholder="Повторите заданный пароль" name="psw-repeat" required>
+    <hr>
+    <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#">Условия и конфиденциальности</a>.</p>
+
+    <button type="submit" class="registerbtn">Регистрация</button>
+  </div>
+
+  <div class="container signin">
+    <p>Уже есть аккаунт? <a href="#">Войти в систему</a>.</p>
+  </div>
+</form>
 
 </body>
 </html>
