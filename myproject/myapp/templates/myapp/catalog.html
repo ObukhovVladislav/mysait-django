@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-    {% block css %}
-        <link rel="stylesheet" href="/static/css/catalog.css">
-    {% endblock %}
-</head>
-<body>
-<nav>
-    <ul class="topmenu">
-        <li><a href="/">Главная</a></li>
-        <li><a href="/catalog/" class="down">Каталог</a>
-            <ul class="submenu">
-                <li><a href="">Компьютерная техника</a></li>
-                <li><a href="">Бытовая техника</a></li>
-                <li><a href="">Мобильные телефоны</a></li>
-            </ul>
-        </li>
-        <li><a href="/basket/">Корзина</a></li>
-    </ul>
-</nav>
+{% extends 'myapp/index.html' %}
 
-<div class="catalog">
-    <img src="\static\img\keyboard.jpg" alt="keyboard">
-    <h2>
-        <span>Периферия и аксессуары</span>
-    </h2>
-
-    <img src="\static\img\motherboard.jpg" alt="motherboard">
-    <h2>Комплектующие</h2>
-
-</div>
-</body>
-</html>
-
+{% block content %}
+    <h1>Каталог</h1>
+    <div class="catalog-menu">
+        <ul>
+            {% for item in categories %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
