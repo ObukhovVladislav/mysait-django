@@ -5,8 +5,11 @@
     <div class="catalog-menu">
         <ul>
             {% for item in categories %}
-                <li>{{ item }}</li>
+                <li>
+                    <a href="#">{{ item }}</a>
+                </li>
             {% endfor %}
         </ul>
     </div>
+
 {% endblock %}
