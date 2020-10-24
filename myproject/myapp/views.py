@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from myapp.models import ProductCategories
+from myapp.models import ProductCategory
 
 
 def index(request):
@@ -8,7 +8,7 @@ def index(request):
 
 
 def catalog(request):
-    categories = ProductCategories.objects.all()
+    categories = ProductCategory.objects.all()
     context = {
         'categories': categories
     }

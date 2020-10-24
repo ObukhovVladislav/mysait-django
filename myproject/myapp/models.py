@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class ProductCategories(models.Model):
+class ProductCategory(models.Model):
     name = models.CharField(max_length=128)
     desc = models.TextField(blank=True)
 
@@ -10,7 +10,7 @@ class ProductCategories(models.Model):
 
 
 class Products(models.Model):
-    category = models.ForeignKey(ProductCategories,
+    category = models.ForeignKey(ProductCategory,
                                  on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     desc = models.TextField(blank=True)
