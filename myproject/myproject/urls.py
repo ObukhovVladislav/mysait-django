@@ -19,12 +19,13 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('', myapp.index),
+    path('', myapp.index, name='index'),
 
-    path('catalog/', myapp.catalog),
+    path('catalog/', myapp.catalog, name='catalog'),
+
     path('catalog/category/<int:pk>/', myapp.catalog_page, name='catalog_page'),
 
-    path('basket/', myapp.basket),
+    path('basket/', myapp.basket, name='basket'),
 
     path('admin/', admin.site.urls),
 ]

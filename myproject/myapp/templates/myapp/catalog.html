@@ -6,7 +6,9 @@
         <ul>
             {% for item in categories %}
                 <li>
-                    <a href="#">{{ item }}</a>
+                    <h3><a href="{% url 'catalog_page' item.pk %}">
+                        {{ item }}
+                    </a></h3>
                 </li>
             {% endfor %}
         </ul>
