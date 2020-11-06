@@ -25,6 +25,8 @@ urlpatterns = [
 
     path('catalog/category/<int:pk>/', myapp.catalog_page, name='catalog_page'),
 
+    path('catalog/product/<int:pk>/', myapp.product_page, name='product_page'),
+
     path('basket/', myapp.basket, name='basket'),
 
     path('admin/', admin.site.urls),

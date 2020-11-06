@@ -14,7 +14,9 @@ class Products(models.Model):
                                  on_delete=models.CASCADE)
     name = models.CharField('Название', max_length=200)
     desc = models.TextField('Описание', blank=True)
-    is_active = models.BooleanField(default=True)
+
+    # price = models.IntegerField('Цена', default=0)
+    is_active = models.BooleanField('Активно', default=True)
 
     def __str__(self):
         return self.name

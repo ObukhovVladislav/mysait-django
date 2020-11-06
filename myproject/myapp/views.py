@@ -28,6 +28,15 @@ def catalog_page(request, pk):
     return render(request, 'myapp/catalog_page.html', context)
 
 
+def product_page(request, pk):
+    product = Products.objects.get(pk=pk)
+    context = {
+        'product': product,
+        'page_title': 'страница товара'
+    }
+    return render(request, 'myapp/product_page.html', context)
+
+
 def basket(request):
     context = {
         'page_title': 'корзина'
