@@ -19,17 +19,17 @@ def catalog(request):
     return render(request, 'myapp/catalog.html', context)
 
 
-def catalog_page(request, pk):
-    items = Products.objects.filter(category_id=pk)
+def catalog_section(request, category_pk):
+    items = Products.objects.filter(category_id=category_pk)
     context = {
         'items': items,
         'page_title': 'страница товаров'
     }
-    return render(request, 'myapp/catalog_page.html', context)
+    return render(request, 'myapp/catalog_section.html', context)
 
 
-def product_page(request, pk):
-    product = Products.objects.get(pk=pk)
+def product_page(request, product_pk):
+    product = Products.objects.get(pk=product_pk)
     context = {
         'product': product,
         'page_title': 'страница товара'

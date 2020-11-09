@@ -15,19 +15,13 @@ Including another URLconf
 """
 import myapp.views as myapp
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
 
 urlpatterns = [
-    path('', myapp.index, name='index'),
-
-    path('catalog/', myapp.catalog, name='catalog'),
-
-    path('catalog/category/<int:pk>/', myapp.catalog_page, name='catalog_page'),
-
-    path('catalog/product/<int:pk>/', myapp.product_page, name='product_page'),
+    path('', include('myapp.urls', namespace='my')),
 
     path('basket/', myapp.basket, name='basket'),
 
     path('admin/', admin.site.urls),
+
 ]

@@ -6,7 +6,7 @@
         <ul>
             {% for item in items %}
                 <li>
-                    <h4><a href="{% url 'product_page' item.pk %}">
+                    <h4><a href="{% url 'my:product_page' item.pk %}">
                         {{ item }}
                     </a></h4>
                 </li>
