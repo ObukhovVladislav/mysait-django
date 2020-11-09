@@ -19,6 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('myapp.urls', namespace='my')),
+    path('auth/', include('authapp.urls', namespace='auth')),
 
     path('basket/', myapp.basket, name='basket'),
 
