@@ -2,37 +2,15 @@
 
 {% block content %}
     <div class ="login-form">
-        <h2>Вход в систему</h2>
-        <form class="login-form">
+        <div class="form-title">
+            <h2>Вход в систему</h2>
+        </div>
+        <form class="login-form" method="post">
+            {% csrf_token %}
             {{ form.as_p }}
+            <input type="sumbit"
+                   class="btn btn-dark form-control"
+                   value="Войти">
         </form>
     </div>
-
-
-
-
-{#<form>#}
-{#  <div class="container">#}
-{#    <h1>Регистрация</h1>#}
-{#    <p>Пожалуйста заполните эту форму для регистрации аккаунта.</p>#}
-{#    <hr>#}
-{##}
-{#    <label for="email"><b>Ваш e-mail(он же будет логином)*</b></label>#}
-{#    <input type="text" placeholder="Адрес вашей электронной почты" name="email" required>#}
-{##}
-{#    <label for="psw"><b>Пароль</b></label>#}
-{#    <input type="password" placeholder="Задайте пароль" name="psw" required>#}
-{##}
-{#    <label for="psw-repeat"><b>Повторите пароль</b></label>#}
-{#    <input type="password" placeholder="Повторите заданный пароль" name="psw-repeat" required>#}
-{#    <hr>#}
-{#    <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#">Условия и конфиденциальности</a>.</p>#}
-{##}
-{#    <button type="submit" class="registerbtn">Регистрация</button>#}
-{#  </div>#}
-{##}
-{#  <div class="container signin">#}
-{#    <p>Уже есть аккаунт? <a href="#">Войти в систему</a>.</p>#}
-{#  </div>#}
-{#</form>#}
 {% endblock %}

@@ -4,9 +4,12 @@ from authapp.forms import LoginForm
 
 
 def login(request):
-    # form = AuthenticationForm()
-    form = LoginForm()
-
+    if request.method == 'POST':
+        form = LoginForm(data=request.POST)
+        if form.is_valid():
+            pass
+    else:
+        form = LoginForm()
 
     context = {
         'page_title': 'авторизация',

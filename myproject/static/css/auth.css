@@ -1,0 +1,12 @@
+.login-form{
+    width: 50%;
+    margin: 5vh auto;
+
+}
+.form-title{
+    text-align: center;
+    font-weight: bold;
+}
+body{
+    background: url(/static/img/background.png)
+}
