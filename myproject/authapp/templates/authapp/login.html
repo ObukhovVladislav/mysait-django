@@ -1,16 +1,18 @@
 {% extends 'authapp/base.html' %}
 
 {% block content %}
-    <div class ="login-form">
-        <div class="form-title">
-            <h2>Вход в систему</h2>
-        </div>
-        <form class="login-form" method="post">
+    <div class="login-form">
+        <div class="form-title">Вход в систему</div>
+        <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="sumbit"
+            <input type="submit"
                    class="btn btn-dark form-control"
-                   value="Войти">
+                   value="войти">
         </form>
+        <br>
+        <a class="btn btn-dark form-control" href="{% url 'auth:register' %}">
+            зарегистрироваться
+        </a>
     </div>
 {% endblock %}
