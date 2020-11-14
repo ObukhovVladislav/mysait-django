@@ -18,10 +18,10 @@ def add(request, products_id):
        # products_id=products_id
        products=products
     )
+    # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     return HttpResponseRedirect(
        reverse('my:catalog_section',
                kwargs={'category_pk': products.category_id })
     )
 
 
-# return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
