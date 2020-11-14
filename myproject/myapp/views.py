@@ -37,8 +37,3 @@ def product_page(request, product_pk):
     return render(request, 'myapp/product_page.html', context)
 
 
-def basket(request):
-    context = {
-        'page_title': 'корзина'
-    }
-    return render(request, 'myapp/basket.html', context)
