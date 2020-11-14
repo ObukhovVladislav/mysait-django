@@ -4,5 +4,6 @@ from django.urls import path, include
 app_name = 'basketapp'
 
 urlpatterns = [
-    path('index/', basketapp.index, name='index'),
+    path('', basketapp.index, name='index'),
+    path('add/<int:products_id>', basketapp.add, name='add'),
 ]
