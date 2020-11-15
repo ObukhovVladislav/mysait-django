@@ -10,5 +10,4 @@ urlpatterns = [
     path('catalog/category/<int:category_pk>/', myapp.catalog_section, name='catalog_section'),
 
     path('catalog/product/<int:product_pk>/', myapp.product_page, name='product_page'),
-
 ]
