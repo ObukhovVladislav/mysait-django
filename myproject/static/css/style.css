@@ -156,3 +156,8 @@ input[type=email], input[type=email] {
     border: none;
     background: #f1f1f1;
 }
+
+.basket li {
+    margin: 1vh;
+
+}

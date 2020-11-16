@@ -7,7 +7,9 @@
     <p class="product_desc">
         Описание: {{ product.desc }}
     </p>
-
-
+    <a href="{% url 'basket:add' product.id %}"
+       class="btn btn-dark">
+        купить
+    </a>
 
 {% endblock %}
