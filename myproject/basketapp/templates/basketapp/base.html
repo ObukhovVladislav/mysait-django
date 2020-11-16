@@ -16,9 +16,15 @@
 {% block menu %}
 <nav>
     <ul class="topmenu">
-        <li><a href="{% url 'my:index' %}">Главная</a></li>
-        <li><a href="{% url 'my:catalog' %}" class="down">Каталог</a>
-        <li><a href="{% url 'basket:index' %}">Корзина</a></li>
+        <li>
+            <a href="{% url 'my:index' %}">Главная</a>
+        </li>
+        <li>
+            <a href="{% url 'my:catalog' %}" class="down">Каталог</a>
+        </li>
+        <li>
+        <a href="{% url 'basket:index' %}">Корзина</a>
+        </li>
         <li>
             {% if user.is_authenticated %}
                 <a href="{% url 'auth:logout' %}">Выйти</a>
@@ -31,8 +37,6 @@
 </nav>
 {% endblock %}
 {% block content %}
-
 {% endblock %}
-
 </body>
 </html>
